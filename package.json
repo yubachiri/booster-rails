@@ -1,5 +1,10 @@
 {
   "name": "mvp-booster-rails",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "bootstrap": "^3.3.5",
+    "gentelella": "^1.4.0",
+    "jquery": "^3.3.1"
+  }
 }
