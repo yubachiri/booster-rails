@@ -19,15 +19,27 @@ Bundler.require(*Rails.groups)
 
 module MvpBoosterRails
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    class Application < Rails::Application
+      # Initialize configuration defaults for originally generated Rails version.
+      config.load_defaults 5.2
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+      # Locale
+      config.i18n.default_locale = :ja
 
-    # Don't generate system test files.
-    config.generators.system_tests = nil
+      # Time zone
+      config.time_zone = 'Tokyo'
+      config.active_record.default_timezone = :local
+
+      # Generators
+      config.generators do |g|
+        g.test_framework  nil
+        g.stylesheets false
+        g.javascripts false
+        g.helper false
+        g.assets  false
+        g.helper false
+        g.template_engine :slim
+        g.scaffold_controller "scaffold_controller"
+      end
   end
 end
