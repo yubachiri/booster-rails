@@ -1,0 +1,32 @@
+ja:
+  admin:
+    site_title: Admin MVP Template
+    title:
+      users:
+        index: ユーザ管理
+      admin_users:
+        index: 管理者アカウント管理
+
+    actions:
+      show: 詳細
+      new: 新規作成
+      edit: 編集
+      destroy: 削除
+      search: 検索
+
+    messages:
+      create:
+        success: 作成しました。
+        failure: 入力内容に誤りがあります。
+      update:
+        success: 更新しました。
+        confirm: 本当にキャンセルしてもよろしいですか？
+        failure: 入力内容に誤りがあります。
+      destroy:
+        confirm: 本当に削除してもよろしいですか？
+        success: 削除しました。
+
+    header:
+      edit: アカウント情報変更
+      password: パスワード変更
+      sign_out: ログアウト

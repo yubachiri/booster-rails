@@ -41,5 +41,6 @@ module MvpBoosterRails
         g.template_engine :slim
         g.scaffold_controller "scaffold_controller"
       end
+    end
   end
 end
