@@ -94,6 +94,8 @@ GEM
     ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gretel (3.0.9)
+      rails (>= 3.1.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -287,6 +289,7 @@ DEPENDENCIES
   dotenv-rails
   enum_help
   factory_bot_rails
+  gretel
   jbuilder (~> 2.5)
   kaminari
   kaminari-i18n

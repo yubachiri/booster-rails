@@ -1,0 +1,14 @@
+= form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+  h1 = t('admin.site_title')
+  div
+    = f.email_field :email, class: 'form-control', placeholder: AdminUser.human_attribute_name(:email), autofocus: true
+  div
+    = f.password_field :password, class: 'form-control', placeholder: AdminUser.human_attribute_name(:password), autocomplete: 'off'
+  - if devise_mapping.rememberable?
+    div
+      = f.check_box :remember_me
+      | &nbsp;
+      = f.label :remember_me
+  div
+    = f.submit t('devise.sessions.new.sign_in'), class: 'btn btn-default'
+    = link_to t('devise.passwords.new.forgot_your_password'), new_password_path(resource_name), class: 'reset_pass'

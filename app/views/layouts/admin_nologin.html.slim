@@ -1,0 +1,19 @@
+doctype html
+html lang="ja"
+  head
+    meta charset="utf8"
+    title = t('admin.site_title')
+    = csrf_meta_tags
+
+    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+    = stylesheet_link_tag 'admin', media: 'all'
+
+  body.login
+    .login_wrapper
+      .animate.form.login_form
+        section.login_content
+          - if notice
+            .flash-notice = notice
+          - if alert
+            .flash-alert = alert
+          = yield

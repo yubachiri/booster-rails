@@ -1,5 +1,5 @@
 class Admin::AdminUsers::PasswordsController < Devise::PasswordsController
-  layout 'admin'
+  layout 'admin_nologin'
 
   # GET /resource/password/new
   # def new
@@ -32,7 +32,7 @@ class Admin::AdminUsers::PasswordsController < Devise::PasswordsController
   #   super(resource_name)
   # end
 
-  def after_sign_in_path_for(resource)
-    stored_location_for(resource) || admin_admin_users_path
-  end
+  # def after_sign_in_path_for(resource)
+  #   stored_location_for(resource)
+  # end
 end

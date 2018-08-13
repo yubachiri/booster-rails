@@ -1,0 +1,63 @@
+doctype html
+html lang="ja"
+  head
+    meta charset="utf8"
+    title = t('admin.site_title')
+    = csrf_meta_tags
+
+    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+    link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"
+    = stylesheet_link_tag 'admin', media: 'all'
+
+  body.nav-md
+    .container.body
+      .main_container
+        .col-md-3.left_col
+          .left_col.scroll-view
+            .navbar.nav_title
+              = link_to '#', class: 'site_title' do
+                span style="margin-left: 1em; font-size: 0.7em;"
+                  = t('admin.site_title')
+            .clearfix
+            #sidebar-menu.main_menu_side.hidden-print.main_menu
+              .menu_section
+                ul.nav.side-menu
+                  li
+                    = link_to admin_admin_users_path do
+                      i.fa.fa-user-secret
+                      = t('admin.title.admin_users.index')
+
+        .top_nav
+          .nav_menu
+            nav
+              .nav.toggle
+                a#menu_toggle
+                  i.fa.fa-bars
+              ul.nav.navbar-nav.navbar-right
+                li
+                  a.user-profile.dropdown-toggle data-toggle="dropdown"
+                    i.fa.fa-user-secret
+                    | &nbsp;
+                    = current_admin_user.name
+                    | &nbsp;
+                    i.fa.fa-angle-down
+                  ul.dropdown-menu.dropdown-usermenu.pull-right
+                    li = link_to t('admin.header.edit'), edit_admin_admin_user_path(current_admin_user)
+                    li = link_to t('admin.header.password'), password_admin_admin_users_path
+                    li.divider
+                    li = link_to t('admin.header.sign_out'), destroy_admin_user_session_path, method: :delete
+
+        .right_col role="main"
+          .page-title
+            .title_left
+              h3 = yield :title
+            .title_right
+              == breadcrumbs style: :bootstrap
+          .clearfix
+          - if notice
+            .flash-notice = notice
+          - if alert
+            .flash-alert = alert
+          = yield
+
+    = javascript_include_tag 'admin'

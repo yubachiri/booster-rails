@@ -1,0 +1,6 @@
+= form_for resource, as: resource_name, url: password_path(resource_name) do |f|
+  h1 = t('admin.site_title')
+  div
+    = f.email_field :email, class: 'form-control', placeholder: AdminUser.human_attribute_name(:email), autofocus: true
+  div
+    = f.submit t('devise.passwords.new.send_me_reset_password_instructions'), class: 'btn btn-default'

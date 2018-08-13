@@ -1,0 +1,5 @@
+- content_for :title, t('admin.actions.edit')
+- breadcrumb :admin, @admin_user
+.x_panel
+  .x_content
+    = render 'form', resource: @admin_user

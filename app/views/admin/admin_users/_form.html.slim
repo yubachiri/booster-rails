@@ -1,0 +1,7 @@
+= bootstrap_form_for [:admin, resource] do |f|
+  = f.text_field :name
+  = f.text_field :email
+  - if resource.new_record?
+    = f.password_field :password
+    = f.password_field :password_confirmation
+  = f.submit

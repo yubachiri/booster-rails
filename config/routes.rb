@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     passwords: 'public/users/passwords',
   }
   scope '/', module: :public do
-    root to: 'home#index'
+    root to: 'top#index'
   end
 
   # 管理画面
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     passwords: 'admin/admin_users/passwords',
   }
   namespace :admin do
+    root to: 'admin_users#index'
+
     resources :admin_users do
       collection do
         get :password

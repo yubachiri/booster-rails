@@ -2,7 +2,7 @@
   "name": "mvp-booster-rails",
   "private": true,
   "dependencies": {
-    "bootstrap": "^3.3.5",
+    "bootstrap-sass": "^3.3.7",
     "gentelella": "^1.4.0",
     "jquery": "^3.3.1"
   }

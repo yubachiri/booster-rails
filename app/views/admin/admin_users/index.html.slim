@@ -1,0 +1,27 @@
+- content_for :title, t('admin.title.admin_users.index')
+- breadcrumb :admin_users
+.x_panel
+  .x_content
+    .pull-right
+      ul.list-inline
+        li = link_to t('admin.actions.new'), new_admin_admin_user_path, class: 'btn-new'
+    .clearfix
+    table.table.table-hover
+      thead
+        tr
+          th = sort_link @q, :id
+          th = sort_link @q, :name
+          th = sort_link @q, :email
+          th = sort_link @q, :created_at
+          th = sort_link @q, :updated_at
+          th
+      tbody
+        - @admin_users.each do |admin_user|
+          tr
+            td = admin_user.id
+            td = admin_user.name
+            td = admin_user.email
+            td = l(admin_user.created_at)
+            td = l(admin_user.updated_at)
+            td = link_to t('admin.actions.show'), admin_admin_user_path(admin_user), class: 'btn-show'
+    = paginate @admin_users, theme: :admin

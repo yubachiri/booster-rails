@@ -1,0 +1,20 @@
+- content_for :title, @admin_user.name
+- breadcrumb :admin_user, @admin_user
+.x_panel
+  .x_content
+    .pull-right
+      ul.list-inline
+        li = link_to t('admin.actions.edit'), edit_admin_admin_user_path(@admin_user), class: 'btn-edit'
+        li = link_to t('admin.actions.destroy'), admin_admin_user_path(@admin_user), class: 'btn-destroy', method: :delete, data: { confirm: t('admin.messages.destroy.confirm') }
+    .clearfix
+    dl.dl-horizontal
+      dt = AdminUser.human_attribute_name(:id)
+      dd = @admin_user.id
+      dt = AdminUser.human_attribute_name(:name)
+      dd = @admin_user.name
+      dt = AdminUser.human_attribute_name(:email)
+      dd = @admin_user.email
+      dt = AdminUser.human_attribute_name(:created_at)
+      dd = l(@admin_user.created_at)
+      dt = AdminUser.human_attribute_name(:updated_at)
+      dd = l(@admin_user.updated_at)
