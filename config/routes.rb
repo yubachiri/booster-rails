@@ -22,6 +22,7 @@ Rails.application.routes.draw do
         patch :password_update
       end
     end
+    resources :users
   end
 
   # 送信メール (development only)

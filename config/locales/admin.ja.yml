@@ -2,10 +2,10 @@ ja:
   admin:
     site_title: Admin MVP Template
     title:
-      users:
-        index: ユーザ管理
       admin_users:
         index: 管理者アカウント管理
+      users:
+        index: ユーザ管理
 
     actions:
       show: 詳細

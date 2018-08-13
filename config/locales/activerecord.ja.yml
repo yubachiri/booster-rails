@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       admin_user: 管理者アカウント
+      user: ユーザーアカウント
     attributes:
       admin_user:
         name: 氏名
@@ -10,6 +11,9 @@ ja:
         password_confirmation: 確認用パスワード
         current_password: 現在のパスワード
         remember_me: ログインを記憶
+      user:
+        last_name: 姓
+        first_name: 名
 
   attributes:
     id: ID

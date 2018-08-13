@@ -1,0 +1,38 @@
+- content_for :title, t('admin.title.users.index')
+- breadcrumb :users
+
+.x_panel
+  .x_content
+    = search_form_for [:admin, @q] do |f|
+      .row
+        .col-sm-4.form-group
+          = f.label :email
+          = f.search_field :email_cont, class: 'form-control'
+      ul.list-inline
+        li = f.submit t('admin.actions.search'), class: 'btn-search'
+    .pull-right
+      ul.list-inline
+        li = link_to t('admin.actions.new'), :new_admin_user, class: 'btn-new'
+    .clearfix
+    table.table.table-hover
+      thead
+        tr
+          th = sort_link @q, :id
+          th = sort_link @q, :email
+          th = sort_link @q, :last_name
+          th = sort_link @q, :first_name
+          th = sort_link @q, :created_at
+          th = sort_link @q, :updated_at
+          th
+      tbody
+        - @users.each do |user|
+          tr
+            td = user.id
+            td = user.email
+            td = user.last_name
+            td = user.first_name
+            td = l(user.created_at)
+            td = l(user.updated_at)
+            td = link_to t('admin.actions.show'), admin_user_path(user), class: 'btn-show'
+
+    = paginate @users, theme: :admin
