@@ -11,7 +11,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'slim-rails'
 gem 'enum_help'
-gem 'gretel'
 gem 'kaminari'
 gem 'kaminari-i18n'
 gem 'bootstrap_form'
