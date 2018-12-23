@@ -8,13 +8,13 @@ default: &default
 
 development:
   <<: *default
-  database: mvp-booster-rails_development
+  database: booster-rails_development
 
 test:
   <<: *default
-  database: mvp-booster-rails_test
+  database: booster-rails_test
 
 production:
   <<: *default
-  database: mvp-booster-rails_production
-  username: mvp-booster-rails
+  database: booster-rails_production
+  username: booster-rails

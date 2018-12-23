@@ -17,6 +17,7 @@
 /storage/*
 !/storage/.keep
 
+/public/uploads/*
 /node_modules
 /yarn-error.log
 
@@ -28,3 +29,10 @@
 
 docker-compose.override.yml
 .env
+
+# for mac
+.DS_Store
+
+# IDE
+/.idea
+.vscode

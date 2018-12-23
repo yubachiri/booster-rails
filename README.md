@@ -1,24 +1,30 @@
-# README
+## 開発環境
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 必要なツール
+Docker for Mac / Windows
 
-Things you may want to cover:
+## セットアップ
 
-* Ruby version
+```
+$ docker-compose build
+$ docker-compose run --rm app bin/setup
+$ cp docker-compose.override.yml.example  docker-compose.override.yml
+```
 
-* System dependencies
+## 起動
 
-* Configuration
+```
+$ docker-compose up -d
+```
 
-* Database creation
+http://localhost:3008
 
-* Database initialization
+### 稼働中のコンテナのシェルに接続
 
-* How to run the test suite
+```
+$ docker-compose exec app sh
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## 参考URL
 
-* Deployment instructions
-
-* ...
+- [Gentelella](https://colorlib.com/polygon/gentelella/) (管理画面で使っているBootstrapテーマ)

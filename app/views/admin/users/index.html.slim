@@ -1,4 +1,6 @@
 - content_for :title, t('admin.title.users.index')
+- breadcrumb :users, @users
+
 .x_panel
   .x_content
     = search_form_for [:admin, @q] do |f|

@@ -1,5 +1,5 @@
-@import "bootstrap-sass/assets/stylesheets/_bootstrap";
-@import "gentelella/src/scss/custom";
+@import "bootstrap/dist/css/bootstrap.min";
+@import "gentelella/build/css/custom.min";
 
 body {
   word-wrap: break-word;

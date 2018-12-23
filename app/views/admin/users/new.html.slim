@@ -1,4 +1,6 @@
 - content_for :title, t('admin.actions.new')
+- breadcrumb :new_user, @user
+
 .x_panel
   .x_content
     = render 'form', resource: @user

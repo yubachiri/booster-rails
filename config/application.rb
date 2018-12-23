@@ -17,7 +17,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module MvpBoosterRails
+module BoosterRails
   class Application < Rails::Application
     class Application < Rails::Application
       # Initialize configuration defaults for originally generated Rails version.
@@ -40,6 +40,7 @@ module MvpBoosterRails
         g.helper false
         g.template_engine :slim
         g.scaffold_controller "scaffold_controller"
+        g.fixture_replacement :factory_bot, dir: "spec/factories"
       end
     end
   end

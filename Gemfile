@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.0'
+ruby '2.5.3'
 gem 'rails', '~> 5.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
@@ -11,17 +11,16 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'slim-rails'
 gem 'enum_help'
+gem 'gretel'
 gem 'kaminari'
 gem 'kaminari-i18n'
 gem 'bootstrap_form'
 gem 'rails-i18n'
+gem 'dotenv-rails'
 
 # ログイン
 gem 'devise'
 gem 'devise-i18n'
-
-# 環境変数
-gem 'dotenv-rails'
 
 # 検索
 gem 'ransack'
@@ -39,6 +38,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'capybara', '~> 2.13'
   gem 'spring-commands-rspec'
+  gem 'selenium-webdriver'
 end
 
 group :development do
