@@ -19,29 +19,27 @@ Bundler.require(*Rails.groups)
 
 module BoosterRails
   class Application < Rails::Application
-    class Application < Rails::Application
-      # Initialize configuration defaults for originally generated Rails version.
-      config.load_defaults 5.2
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 5.2
 
-      # Locale
-      config.i18n.default_locale = :ja
+    # Locale
+    config.i18n.default_locale = :ja
 
-      # Time zone
-      config.time_zone = 'Tokyo'
-      config.active_record.default_timezone = :local
+    # Time zone
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
 
-      # Generators
-      config.generators do |g|
-        g.test_framework  nil
-        g.stylesheets false
-        g.javascripts false
-        g.helper false
-        g.assets  false
-        g.helper false
-        g.template_engine :slim
-        g.scaffold_controller "scaffold_controller"
-        g.fixture_replacement :factory_bot, dir: "spec/factories"
-      end
+    # Generators
+    config.generators do |g|
+      g.test_framework nil
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
+      g.assets false
+      g.helper false
+      g.template_engine :slim
+      g.scaffold_controller "scaffold_controller"
+      g.fixture_replacement :factory_bot, dir: "spec/factories"
     end
   end
 end
