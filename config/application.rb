@@ -20,7 +20,7 @@ Bundler.require(*Rails.groups)
 module BoosterRails
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    config.load_defaults 6.0
 
     # Locale
     config.i18n.default_locale = :ja
